@@ -46,7 +46,7 @@ export default function App() {
     setMessage(null);
 
     try {
-      const res = await fetch("http://localhost:4000/api/complaints", {
+      const res = await fetch("https://bluebackend-ym5v.onrender.com/api/complaints", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
