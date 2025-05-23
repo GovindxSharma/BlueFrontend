@@ -23,6 +23,14 @@ export default function App() {
     }
   };
 
+
+
+useEffect(() => {
+  fetch("https://bluebackend-ym5v.onrender.com/")
+    .then(() => console.log("✅ Backend woken up!"))
+    .catch(() => console.log("❌ Could not reach backend"));
+}, []);
+
   // call adjustHeight on every input change and initial render
   useEffect(() => {
     adjustHeight(concernRef);
